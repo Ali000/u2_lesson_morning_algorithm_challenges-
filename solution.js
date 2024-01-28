@@ -1,7 +1,12 @@
 // 1. Sum Squares
 
 const sumSquares = (num) => {
-     //Ask Salman for the answer
+    // Solution
+    let total = 0;
+    for(i = 1; i < num + 1; i++) {
+        total += i*i;
+    }
+    return total;
 }
 
 // Test
@@ -17,6 +22,13 @@ console.log("Result 1:", sumSquares(startNum)); // Expected output is 14
 
 const invertValues = (numArr) => {
      // Your solution here 
+    // let negativeNums = [];
+
+    // numArr.forEach((value) => {
+    //     negativeNums.push(value * -1);
+    // });
+    // return negativeNums;
+    return numArr.map((value) => value * -1)
 }
 
 // Test
