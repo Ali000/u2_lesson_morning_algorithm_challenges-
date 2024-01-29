@@ -43,6 +43,12 @@ console.log("Result 2:", invertValues(numArr2));  // Expected output is [-1, -3,
 
 const reverseString = (str) => {
    // Your solution here 
+   let reversedStr = "";
+
+   for(let i = str.length -1; i > -1; i--) {
+    reversedStr += str[i];
+   }
+   return reversedStr;
 }
 
 // Test
@@ -57,11 +63,23 @@ console.log("Result 3:", reverseString(stringToReverse));   // Expected output i
 
 const findSmallestInt = (numArr) => {
     // Your solution here 
+    let counter = 1;
+    let SmallestPositive;
+    for(let i = 0; i < numArr.length; i++) {
+        if (counter === numArr[i]) {
+            counter++;
+            continue;
+        } else {
+            SmallestPositive = counter;
+            break;
+        }
+    }
+    return SmallestPositive;
 }
 
 // Test
 
-const numArr3 = [1, 3, 4, 5]
+const numArr3 = [1, 2, 3, 4, 5, 7]
 console.log("Result 4:", findSmallestInt(numArr3));  // Expected output is 2
 
 
