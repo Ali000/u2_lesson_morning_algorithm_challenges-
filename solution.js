@@ -89,6 +89,14 @@ console.log("Result 4:", findSmallestInt(numArr3));  // Expected output is 2
 
 const countingSheep = (boolArr) => {
     // Your solution here 
+    // let count = 0;
+    // boolArr.forEach(element => {
+    //     element ? count++ : false;
+    // });
+    
+    // return count;
+
+    return boolArr.filter( value => value === true).length;
 }
 
 // Test
@@ -103,6 +111,11 @@ console.log("Result 5:", countingSheep(sheepArr));  // Expected output is 3
 
 const calculateAverage = (numArr) => {
     // Your solution here 
+    let count = 0;
+    numArr.forEach(element => {
+        count += element;
+    });
+    return count / numArr.length;
 }
 
 // Test
