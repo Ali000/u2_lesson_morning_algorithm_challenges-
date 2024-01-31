@@ -130,6 +130,8 @@ console.log("Result 6:", calculateAverage(numArr4))  // Expected output is 30
 
 const isPalindrome = (str) => {
     // Your solution here 
+    // return reverseString(str) === str;
+   return str === str.split("").reverse().join("") ?  true : false;
 }
 
 // Test
