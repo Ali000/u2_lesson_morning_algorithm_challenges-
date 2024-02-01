@@ -145,6 +145,16 @@ console.log("Result 7:", isPalindrome(testStr));  // Expected output is true
 // 8. Find the middle element
 
 const findMiddleElement = (numArr) => {
+    let middleElement = 0
+    middleElement = Math.floor(numArr.length / 2);
+
+    if(numArr.length % 2) {
+        return numArr[middleElement];
+    } else {
+        let middleSecond = middleElement--;
+        let total = numArr[middleElement] + numArr[middleSecond];
+        return total / 2;
+    }
 }
 
 // Test
